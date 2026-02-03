@@ -413,7 +413,7 @@ solutions </p>
                                 <span class="flaticon-engineer"></span>
                             </div>
                             <div class="text">
-                                <h4><a href="#">Expert Engineer</a></h4>
+                                <h4><a href="#0">Expert Engineer</a></h4>
                                 <p>Skilled professionals with years of<br> roofing expertise.</p>
                             </div>
                         </div>
@@ -427,7 +427,7 @@ solutions </p>
                                 <span class="flaticon-graphic-tool"></span>
                             </div>
                             <div class="text">
-                                <h4><a href="#">Quality Materials</a></h4>
+                                <h4><a href="#0">Quality Materials</a></h4>
                                 <p>Durable, top-grade materials for<br> long-lasting roofs</p>
                             </div>
                         </div>
@@ -441,7 +441,7 @@ solutions </p>
                                 <span class="flaticon-wrench"></span>
                             </div>
                             <div class="text">
-                                <h4><a href="#">Fully Insured & Compliant</a></h4>
+                                <h4><a href="#0">Fully Insured & Compliant</a></h4>
                                 <p>Safety and compliance guaranteed<br> on every project</p>
                             </div>
                         </div>
@@ -1576,6 +1576,12 @@ highly recommend their services!
     <!-- thm custom script -->
     <script src="assets/js/custom.js"></script>
 
+<script>
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+        e.preventDefault(); // stop form submit
+        window.location.href = "quote.html"; // redirect page
+    });
+</script>
 
 
 </body>
