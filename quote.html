@@ -348,7 +348,31 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-xl-12 text-center">
+                                        <div class="col-xl-12">
+                                            <div class="input-box">
+                                                <select name="form_work_type" class="ignore" style="width: 100%; height: 55px; padding-left: 25px; padding-right: 25px; border: 1px solid #e5e5e5; border-radius: 27px; background-color: #ffffff; font-size: 15px; color: #808080; font-weight: 400; transition: all 500ms ease; appearance: none; -webkit-appearance: none; -moz-appearance: none; background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2224%22 viewBox=%220 0 24 24%22><path fill=%22%23808080%22 d=%22M7 10l5 5 5-5z%22/></svg>'); background-repeat: no-repeat; background-position: right 15px center; cursor: pointer;">
+                                                    <option value="">Type of Work :</option>
+                                                    <option value="New Roof Installation">New Roof Installation</option>
+                                                    <option value="Roof Repair">Roof Repair</option>
+                                                    <option value="Roof Replacement">Roof Replacement</option>
+                                                    <option value="Roof Inspection">Roof Inspection</option>
+                                                    <option value="Leak Repair">Leak Repair</option>
+                                                    <option value="Storm Damage Repair">Storm Damage Repair</option>
+                                                    <option value="Gutter Installation">Gutter Installation</option>
+                                                    <option value="Gutter Repair">Gutter Repair</option>
+                                                    <option value="Roof Maintenance">Roof Maintenance</option>
+                                                    <option value="Emergency Roofing">Emergency Roofing</option>
+                                                    <option value="Shingle Replacement">Shingle Replacement</option>
+                                                    <option value="Flat Roof Services">Flat Roof Services</option>
+                                                    <option value="Commercial Roofing">Commercial Roofing</option>
+                                                    <option value="Residential Roofing">Residential Roofing</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-12">
                                             <div class="input-box two">
                                                 <textarea name="form_message" placeholder="Enter your message..."
                                                     required=""></textarea>
@@ -596,6 +620,17 @@
     <!-- thm custom script -->
     <script src="assets/js/custom.js"></script>
 
+    <script>
+        // Prevent nice-select from initializing on our custom type of work dropdown
+        jQuery(document).ready(function($) {
+            $('select[name="form_work_type"]').removeClass('nice-select');
+            $('.nice-select').each(function() {
+                if ($(this).prev('select[name="form_work_type"]').length) {
+                    $(this).remove();
+                }
+            });
+        });
+    </script>
 
 
 </body>
