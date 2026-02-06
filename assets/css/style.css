@@ -5678,4 +5678,7 @@ select:focus {
     border: 1px solid #1d1d1d;    
 }
 
+.arrow-box img {
+    filter: brightness(0) invert(1);
+}
 
