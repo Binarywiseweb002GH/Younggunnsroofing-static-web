@@ -5681,4 +5681,24 @@ select:focus {
 .arrow-box img {
     filter: brightness(0) invert(1);
 }
+/* Force button to stay black */
+.header-right_buttom .btn-one {
+    background-color: #000 !important;
+    color: #fff !important;
+    border-color: #000 !important;
+}
+
+/* Kill hover overlay (silver layer) */
+.header-right_buttom .btn-one::before,
+.header-right_buttom .btn-one::after {
+    background-color: #000 !important;
+}
+
+/* Hover state */
+.header-right_buttom .btn-one:hover,
+.header-right_buttom .btn-one:hover::before,
+.header-right_buttom .btn-one:hover::after {
+    background-color: #000 !important;
+    color: #fff !important;
+}
 
